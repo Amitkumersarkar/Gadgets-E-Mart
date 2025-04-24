@@ -1,0 +1,9 @@
+.active {
+    background-color: aqua;
+    color: aliceblue;
+}
+
+.btn {
+    padding: 15px;
+    cursor: pointer;
+}
