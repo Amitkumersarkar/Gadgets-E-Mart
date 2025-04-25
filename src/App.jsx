@@ -21,22 +21,23 @@ function App() {
       setIsActive({
         // give this objects
         cart: true,
-        status: "active",
+        status: "cart",
       })
     }
     else {
       setIsActive({
         cart: false,
-        status: "active",
+        status: "about",
       })
     }
   }
+  // console.log(isActive)
   return (
     <>
       <Navar></Navar>
       <div className='flex justify-around p-4'>
         <AllProducts></AllProducts>
-        <CartContainer handleIsActiveState={handleIsActiveState}></CartContainer>
+        <CartContainer isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
 
       </div>
     </>

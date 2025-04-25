@@ -2,7 +2,7 @@ import './AllProducts.css';
 const AllProducts = () => {
     return (
         <div>
-            <h3 className='text-xl font-bold'> AllProducts</h3>
+            <h3 className='text-2xl font-bold'> AllProducts</h3>
         </div>
     );
 };

@@ -1,13 +1,14 @@
 import './CartContainer.css';
-const CartContainer = ({ handleIsActiveState }) => {
-    // console.log(handleIsActiveState)
+const CartContainer = ({ handleIsActiveState, isActive }) => {
+    // console.log(isActive)
     return (
         <div>
-            <h2 className='text-xl font-bold'>CartContainer</h2>
+            <h2 className='text-2xl font-bold'>CartContainer</h2>
 
-            <div className='flex justify-center gap-7 p-2 font-semibold'>
-                <div onClick={() => handleIsActiveState("cart")} className='cart-btn btn'>Cart</div>
-                <div onClick={() => handleIsActiveState("about")} className='about btn'>About</div>
+            <div className='flex gap-5 p-2 font-semibold'>
+                {/* declare ternary operator */}
+                <div onClick={() => handleIsActiveState("cart")} className={`${isActive.cart ? "btn active" : "btn"}`}>Cart</div>
+                <div onClick={() => handleIsActiveState("about")} className={`${isActive.cart ? "btn" : "btn active"}`}>About</div>
             </div>
         </div>
     );
